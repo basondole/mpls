@@ -241,11 +241,11 @@ Internet  192.168.1.2 -   c203.3af9.0000  ARPA  FastEthernet0/0.200
 
 #### Packet capture of ping from router-2 to router-1 on internal vlan 1003
 
-Packet has one tag as it goes from router-2 to Mikrotik
+Frame has one tag as it goes from router-2 to Mikrotik
 
 ![pcap-r2-to-mk](https://user-images.githubusercontent.com/50369643/61712701-92543000-ad5f-11e9-914c-d6e08496ea9d.png)
 
-Mikrotik assigns a seconds tag and sends the packet towards PE-3 with two vlan tags
+Mikrotik assigns a seconds tag and sends the frame towards PE-3 with two vlan tags
 
 ![pcap-mk-to-pe3](https://user-images.githubusercontent.com/50369643/61712671-80728d00-ad5f-11e9-904a-f28406efb75d.png)
 
