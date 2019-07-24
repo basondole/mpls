@@ -253,6 +253,19 @@ Mikrotik assigns a seconds tag and sends the packet towards PE-3 with two vlan t
 
 # Troubleshooting
 
+Checking the mac-address table on the PE with VPLS instance
+
+```
+root@PE-1> show vpls mac-table instance VPLS vlan 1001
+
+Routing instance : VPLS
+ Bridging domain : __VPLS__, VLAN : 1001
+   MAC                 MAC      Logical          NH     RTR
+   address             flags    interface        Index  ID
+   c2:02:7b:9f:00:00   D        ge-0/0/1.5000   
+   c2:03:3a:f9:00:01   D        lsi.1048576
+ ```  
+ 
 To delete the cvlans added by the script in Mikrotik use below script
 
 ```
@@ -263,6 +276,8 @@ To delete the cvlans added by the script in Mikrotik use below script
 /int vlan {remove [find name=("vlan-" .$x. "-in-1000")]}
 }
 ```
+
+ 
 ##### Note
 
 To delete every bridge interface  
