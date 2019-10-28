@@ -111,7 +111,7 @@ ip extcommunity-list standard RT100:2 permit rt 100:2
 !
 route-map MAP_INTER_AS_NNI permit 10
  description SWAP RT FOR VRF BBB
- match extcommunity SWAP_RT100:2_RT200:2 RT100:2
+ match extcommunity RT100:2
  set extcommunity rt 200:2
 route-map MAP_INTER_AS_NNI permit 20
  description PERMIT OTHERS
